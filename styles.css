@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header, section, aside, footer {
+    padding: 20px;
+    border-bottom: 1px solid #ccccccd0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+}
+
+mainheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+.info-section p{
+    font-size: 1.2em;
+    text-align: center;
+}
+.content p {
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px; /* Changed padding for smaller screens */
+}
+
+.fullscreen-background {
+    width: 100vw;
+    height: 30vh;
+    background-image: url('C19\ 1.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row; /* Changed direction for smaller screens */
+    align-items: center; /* Centering content */
+    width:100%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.content, .image-container {
+    padding: 200px;
+    text-align: center;
+    /* width: 100%; Adjusted width for smaller screens */
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% / 2);
+    /* justify-content: center;
+    align-items: center;
+    flex:1; */
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row; /* Keep it as row for both large and small screens */
+    position: relative;
+    z-index: 1;
+    padding: 0 10px; /* Added padding for smaller screens */
+    margin: 30px;
+}
+
+.info-section, .contact-form {
+    flex: 1; /* Let both sections take equal space */
+    padding: 20px 20px;
+    text-align: center;
+}
+.info-section{
+   
+   margin: 50px;
+    text-align: center;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    margin-bottom: 120px;
+    border: 1px solid rgb(211, 207, 207);
+  
+
+}
+
+.contact-form input, .contact-form button {
+    padding: 8px;
+    width: 100%;
+}
+
+
+
+input[type="checkbox"] {
+    display: inline-flex;
+    margin-right: 5px;
+    /* vertical-align: middle; */
+}
+
+.footer-background {
+    width: 100vw; /* Set width to 100% to ensure it spans the entire width of its container */
+    height: 30vh;
+    background-image: url(Section.png);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0; /* Remove margin-bottom to prevent unnecessary spacing */
+    margin-top: -68px;
+    overflow-x: hidden;
+    margin-left: -20px;
+    /* opacity: 0.3; Set opacity to 50% 
+    background-color: #034460; Fallback color in case the image is transparent */
+}
+
+
+.person_background {
+    width: 100vw;
+    height: 30vh;
+    background-image: url('Section\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0px;
+    position: absolute;
+    top: calc(105% + 100px); /* Adjust this value to position the background */
+   overflow: hidden;
+   overflow-x: hidden;
+    z-index: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+    header img {
+        width: 80px;
+        height: 25px;
+    }
+
+    .fullscreen-background {
+        height: 30vh;
+    }
+
+    .main-section {
+        flex-direction: column; /* Switch to column layout for smaller screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .info-section, .contact-form {
+        margin: 20px ; /* Adjusted margin for smaller screens */
+    }
+
+    .contact-form input, .contact-form button {
+        width: 100%;
+    }
+
+    .content, .image-container {
+        padding: 0px; /* Restored padding for larger screens */
+        max-width: calc(100% );
+    }
+    
+}
